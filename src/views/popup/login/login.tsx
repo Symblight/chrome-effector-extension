@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { useStore } from 'effector-react';
+import { useStore } from 'effector-react/compat';
 
 import { MainTemplate } from '@ui/template/main-content';
 import { LoginForm } from '@features/popup/organisms/login-form';
@@ -9,6 +9,7 @@ import { $session } from '@features/common/session/model';
 
 export const Login: FC = () => {
   const session = useStore($session);
+  console.log(session);
   return (
     <MainTemplate>
       <Wrapper>
